@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PocketSmart AI</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>PocketSmart AI</h1>
+    <p>Your smart budget &amp; recommendation assistant</p>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="home">Home Planner</button>
+    <button class="tab-btn" data-tab="party">Party Planner</button>
+    <button class="tab-btn" data-tab="jewelry">Jewelry Planner</button>
+  </nav>
+
+  <main>
+    <!-- Home Planner -->
+    <section id="home" class="planner active">
+      <h2>Home Interior Planner</h2>
+      <form id="home-form">
+        <label>Budget (₹)
+          <input type="number" name="budget" required min="1">
+        </label>
+        <label>Room details &amp; quantities
+          <textarea name="details" placeholder="e.g. 1 living room, needs sofa, coffee table, 2 lamps" required></textarea>
+        </label>
+        <button type="submit">Get Recommendations</button>
+      </form>
+      <div class="result" id="home-result"></div>
+    </section>
+
+    <!-- Party Planner -->
+    <section id="party" class="planner">
+      <h2>Party Planner</h2>
+      <form id="party-form">
+        <label>Event type
+          <input type="text" name="event_type" placeholder="e.g. Birthday, Anniversary" required>
+        </label>
+        <label>Budget (₹)
+          <input type="number" name="budget" required min="1">
+        </label>
+        <label>Number of guests
+          <input type="number" name="guests" required min="1">
+        </label>
+        <button type="submit">Get Recommendations</button>
+      </form>
+      <div class="result" id="party-result"></div>
+    </section>
+
+    <!-- Jewelry Planner -->
+    <section id="jewelry" class="planner">
+      <h2>Jewelry Planner</h2>
+      <form id="jewelry-form">
+        <label>Budget (₹)
+          <input type="number" name="budget" required min="1">
+        </label>
+        <label>Occasion
+          <input type="text" name="occasion" placeholder="e.g. Wedding, Festive, Casual" required>
+        </label>
+        <label>Outfit photo (optional)
+          <input type="file" name="outfit_image" accept="image/png,image/jpeg,image/webp">
+        </label>
+        <button type="submit">Get Recommendations</button>
+      </form>
+      <div class="result" id="jewelry-result"></div>
+    </section>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
