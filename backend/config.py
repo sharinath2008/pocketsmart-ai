@@ -7,7 +7,7 @@ _IS_PROD = os.getenv("FLASK_ENV", "development") == "production"
 
 
 class Config:
-    GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+    GEMINI_API_KEY = os.getenv("AQ.Ab8RN6Kjesw1LI52jN65NYZh2HwOAstPEajm0F0SboEZu6dU_A")
     GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-1.5-flash")
     SECRET_KEY = os.getenv("FLASK_SECRET_KEY", "dev-secret-key")
     FLASK_ENV = os.getenv("FLASK_ENV", "development")
